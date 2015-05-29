@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FlashDomComunicator</title>
+    <script type="text/javascript" src="App.js"></script>
+    <script type="text/javascript">
+        document.readystatechange = function() {
+            if(document.readyState === "complete") {}
+        };
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var app = new App();
+            app.getFlashObject();
+        });
+    </script>
+</head>
+<body>
+    <object id="flash-container" name="flash-container" type="application/x-shockwave-flash" data="anima.swf" width="550" height="400">
+        <param name="movie" value="anima.swf" />
+        <param name="quality" value="high"/>
+        <param name="allowScriptAccess" value="always"/>
+    </object>
+</body>
+</html>
